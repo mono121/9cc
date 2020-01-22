@@ -3,7 +3,7 @@ try() {
   expected="$1"
   input="$2"
 
-  ./main "$input" > tmp.s
+  ./9cc "$input" > tmp.s
     gcc -o tmp tmp.s
   ./tmp
   actual="$?"
@@ -18,6 +18,6 @@ try() {
 
 try 0 0
 try 42 42
-try 21 ' 5 + 20 - 4'
+try 21 ' a + 20 - 4'
 
 echo OK

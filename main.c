@@ -1,15 +1,15 @@
 #include "9cc.h"
 
 int main(int argc, char **argv) {
-  user_input = argv[1];
-
   if (argc != 2) {
     error("引数の個数が正しくありません");
     return 1;
   }
+   
+  user_input = argv[1];
 
   // トークナイズする
-  token = tokenize(argv[1]);
+  token = tokenize(user_input);
 
   // アセンブリの前半部分を出力
   printf(".intel_syntax noprefix\n");
