@@ -59,6 +59,10 @@ Node *primary();
 Token *new_token(TokenKind kind, Token *cur, char *str);
 Token *tokenize(char *p);
 
+// codegen.c
+
+void gen(Node *node);
+
 // util.c
 
 extern char *user_input;
